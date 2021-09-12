@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/beans/spring-context.xsd">
+
+	<!-- services -->
+	<!-- <bean id="petStore" class="org.springframework.samples.jpetstore.services.PetStoreServiceImpl"> 
+		<property name="accountDao" ref="accountDao" /> <property name="itemDao" 
+		ref="itemDao" /> additional collaborators and configuration for this bean 
+		go here </bean> -->
+
+
+
+      
+      <bean class ="com.parimal.spring.xml_autowire.pojo.Office" name ="office" autowire="byName">
+      	<property name="id" value="10" />
+      	<property name="name" value="Post Office"/>
+      </bean>		
+      
+      <bean class ="com.parimal.spring.xml_autowire.pojo.Address" name ="address">
+   		<property name="street" value="Main Street"/>
+   		<property name="city" value="Nashik" />
+   		<property name="pin" value = "323245"/>
+      </bean>	
+      
+      <bean class ="com.parimal.spring.xml_autowire.pojo.College" name ="college" autowire="byType">
+      	<property name="id" value="15" />
+      	<property name="name" value="ABC College"/>
+      </bean>	
+      	
+      <bean class ="com.parimal.spring.xml_autowire.pojo.Department" name ="dept">
+      	<property name="id" value="20" />
+      	<property name="name" value="Science"/>
+      </bean>	
+      
+     <!--  <bean class ="com.parimal.spring.xml_autowire.pojo.Department" name ="dept1">
+      	<property name="id" value="25" />
+      	<property name="name" value="Commerce"/>
+      </bean>	 -->
+      
+      <bean id="dev" class ="com.parimal.spring.xml_autowire.pojo.Devloper" autowire="constructor"/>
+      	
+      <bean id="language" class="com.parimal.spring.xml_autowire.pojo.Language">
+      	<property name="id" value="2222"/>
+      	<property name="name" value="Java"/>
+      </bean>
+      
+      <bean id="project" class="com.parimal.spring.xml_autowire.pojo.Project">
+      	<property name="id" value="33333"/>
+      	<property name="name" value="Banking"/>
+      </bean>
+		
+</beans>

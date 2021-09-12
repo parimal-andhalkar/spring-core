@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<context:annotation-config />
+
+	<bean id="animal"
+		class="com.parimal.spring.annotation_autowire.pojo.Animal">
+		<property name="id" value="11" />
+	</bean>
+
+	<bean id="detailInfo"
+		class="com.parimal.spring.annotation_autowire.pojo.DetailInfo">
+		<property name="id" value="910" />
+		<property name="name" value="Lion" />
+		<property name="diet" value="Non-Veg" />
+	</bean>
+</beans>
